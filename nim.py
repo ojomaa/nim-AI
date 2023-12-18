@@ -142,18 +142,15 @@ class NimAI():
         Q-value in `self.q`. If there are no available actions in
         `state`, return 0.
         """
+        # Get the values for each state, action combo. If no value, set it to 0
+        q_value_dict = {a: self.q.get((state, a), 0) for s, a in self.q.items() if s== state}
 
-        # Get states and actions in self.q
-        for s, a in self.q.items():
-            if s == state:
-                pass
-        
-        # Check all actions associated with the given state
-        
-        # Select the one with the highest Q-value
-        
-        # Return value
-        pass
+        # If there are no available actions, return 0
+        if not q_value_dict:
+            return 0
+
+        # Return the max value
+        return max(q_value_dict.values())
 
 
     def choose_action(self, state, epsilon=True):
