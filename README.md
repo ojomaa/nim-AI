@@ -8,4 +8,4 @@ This Python script is a game of Nim where the user plays against an AI. The AI u
 
 **AI training on 10,000 games then playing against user**
 
-<img src='nim_recording.gif' width='400'>
+<img src='nim_recording.gif' width='600'>
